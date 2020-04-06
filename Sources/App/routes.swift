@@ -9,7 +9,7 @@ public func routes(_ router: Router) throws {
     
     // Basic "Hello, world!" example
     router.get("hello") { req in
-        return "I'll flipen kill you!"
+        return "Hello World"
     }
     
     router.get("quotes") { req -> [String: [Quote]] in
@@ -22,9 +22,15 @@ public func routes(_ router: Router) throws {
         let quote7 = Quote(id: 6, firstName: "Unknown", lastName: "Unknown", quote: "Don't stop until you're proud")
         let quote8 = Quote(id: 7, firstName: "Unknown", lastName: "Unknown", quote: "What ever you decide to do,\nmake sure it makes you happy.")
         let quote9 = Quote(id: 8, firstName: "Aly", lastName: "Raisman", quote: "The hard days are what make you stronger")
-        let quote10 = Quote(id: 9, firstName: "Napoleon", lastName: "Hill", quote: "If you cannot do great things,\ndo small things in a great way!")
+        let quote10 = Quote(id: 9, firstName: "Napoleon", lastName: "Hill", quote: "If you cannot do great things,\ndo small things in a great way!!!")
         return ["quotes": [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10]]
     }
+
+    router.post([String: [Favourites]].self, at:"favourites") { req, list -> [String: [Favourites]] in
+        // Add logic here
+        return list
+    }
+    
 
     // Example of configuring a controller
     let todoController = TodoController()

@@ -33,6 +33,7 @@
 
 /* Begin PBXBuildFile section */
 		B669002C243B56E7007D4E5C /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669002B243B56E7007D4E5C /* QuoteModel.swift */; };
+		B669002E243BB1C7007D4E5C /* FavouritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669002D243BB1C7007D4E5C /* FavouritesModel.swift */; };
 		OBJ_1070 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AppTests.swift */; };
 		OBJ_1072 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ReduxAPI::App::Product" /* App.framework */; };
 		OBJ_1073 /* Vapor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Vapor::Product" /* Vapor.framework */; };
@@ -5085,6 +5086,7 @@
 
 /* Begin PBXFileReference section */
 		B669002B243B56E7007D4E5C /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		B669002D243BB1C7007D4E5C /* FavouritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesModel.swift; sourceTree = "<group>"; };
 		"Console::Command::Product" /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Logging::Product" /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6725,6 +6727,7 @@
 			children = (
 				OBJ_12 /* Todo.swift */,
 				B669002B243B56E7007D4E5C /* QuoteModel.swift */,
+				B669002D243BB1C7007D4E5C /* FavouritesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -7743,7 +7746,7 @@
 			path = ".build/checkouts/database-kit/Sources/DatabaseKit";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -7757,7 +7760,6 @@
 				OBJ_922 /* web.Dockerfile */,
 				OBJ_923 /* CONTRIBUTING.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* Row */ = {
@@ -10594,7 +10596,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_872 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -11796,6 +11798,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_929 /* TodoController.swift in Sources */,
+				B669002E243BB1C7007D4E5C /* FavouritesModel.swift in Sources */,
 				OBJ_930 /* Todo.swift in Sources */,
 				OBJ_931 /* app.swift in Sources */,
 				OBJ_932 /* boot.swift in Sources */,
