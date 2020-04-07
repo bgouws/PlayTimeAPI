@@ -1,4 +1,4 @@
 module CCryptoOpenSSL {
-    umbrella "/Users/bgouws/Desktop/ReduxAPI/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
+    umbrella "/Users/bgouws/Desktop/PlayTimeAPI/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
     export *
 }

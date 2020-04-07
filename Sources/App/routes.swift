@@ -2,6 +2,7 @@ import Vapor
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
+    var tracks = [Favourites]()
     // Basic "It works" example
     router.get { req in
         return "It works!"
@@ -26,9 +27,19 @@ public func routes(_ router: Router) throws {
         return ["quotes": [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10]]
     }
 
-    router.post([String: [Favourites]].self, at:"favourites") { req, list -> [String: [Favourites]] in
-        // Add logic here
+    router.post(Favourites.self, at:"favourites") { req, list -> Favourites in
+        print(list.id)
+        print(list.trackTitle!)
+        print(list.trackArtist!)
+        addToList(newTrack: list)
+        
         return list
+    }
+    
+    func addToList(newTrack: Favourites) {
+        tracks.append(newTrack)
+        print("Here is the main list")
+        print(tracks)
     }
     
 
