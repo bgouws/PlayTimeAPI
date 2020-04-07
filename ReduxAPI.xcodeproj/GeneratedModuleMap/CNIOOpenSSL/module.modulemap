@@ -1,4 +1,4 @@
 module CNIOOpenSSL {
-    umbrella "/Users/bgouws/Desktop/ReduxAPI/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
+    umbrella "/Users/bgouws/Desktop/PlayTimeAPI/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
     export *
 }
