@@ -27,19 +27,39 @@ public func routes(_ router: Router) throws {
         return ["quotes": [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10]]
     }
 
-    router.post(Favourites.self, at:"favourites") { req, list -> Favourites in
-        print(list.id)
-        print(list.trackTitle!)
-        print(list.trackArtist!)
-        addToList(newTrack: list)
+    router.post(Favourites.self, at:"favourites") { req, list -> [String: [Favourites]] in
+        let favList = ["favList": [list]]
         
-        return list
+        return favList
     }
     
     func addToList(newTrack: Favourites) {
         tracks.append(newTrack)
         print("Here is the main list")
         print(tracks)
+    }
+    
+    router.get("favList", String.parameter) { req -> FavList in
+        let directory = DirectoryConfig.detect()
+        let uid = try req.parameters.next(String.self)
+        let configDir = "Sources/App/Models"
+        let fav = Favourites(id: "Fail", trackTitle: "Fail", trackArtist: "Fail")
+        var list: FavList = FavList(favList: [fav])
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: directory.workDir)
+                .appendingPathComponent(configDir, isDirectory: true)
+                .appendingPathComponent("FavList.json", isDirectory: false))
+            let out = try JSONDecoder().decode(FavList.self, from: data)
+            print(out.favList.count)
+            for track in 0...out.favList.count-1 {
+                if out.favList[track].id == uid {
+                    list.favList.append(out.favList[track])
+                }
+            }
+        } catch {
+            print(error)
+        }
+        return list
     }
     
 
