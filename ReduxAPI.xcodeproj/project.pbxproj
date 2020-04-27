@@ -5087,6 +5087,7 @@
 /* Begin PBXFileReference section */
 		B669002B243B56E7007D4E5C /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		B669002D243BB1C7007D4E5C /* FavouritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesModel.swift; sourceTree = "<group>"; };
+		B6B8E62524496C4A00F82C20 /* AllQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllQuotes.json; sourceTree = "<group>"; };
 		"Console::Command::Product" /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Logging::Product" /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6725,6 +6726,7 @@
 		OBJ_11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6B8E62524496C4A00F82C20 /* AllQuotes.json */,
 				OBJ_12 /* Todo.swift */,
 				B669002B243B56E7007D4E5C /* QuoteModel.swift */,
 				B669002D243BB1C7007D4E5C /* FavouritesModel.swift */,
