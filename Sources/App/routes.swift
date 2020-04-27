@@ -2,10 +2,10 @@ import Vapor
 
 public func routes(_ router: Router) throws {
     var tracks = [Favourites]()
-    router.get { req in
+    router.get { _ in
         return "It works!"
     }
-    func saveDataToFile(newList: [String : [Quote]]) {
+    func saveDataToFile(newList: [String: [Quote]]) {
         let directory = DirectoryConfig.detect()
         let configDir = "Sources/App/Models"
         let encoder = JSONEncoder()
@@ -20,7 +20,7 @@ public func routes(_ router: Router) throws {
             }
         }
     }
-    router.post(Quote.self, at:"saveQuote") { req, list -> QuotesList in
+    router.post(Quote.self, at: "saveQuote") { _, list -> QuotesList in
         var currentList = getCurrentList()
         currentList.allQuotes.append(list)
         let format: [String: [Quote]] = ["allQuotes": currentList.allQuotes]
@@ -44,7 +44,7 @@ public func routes(_ router: Router) throws {
         }
         return (list)
     }
-    router.get("allQuotes") { req -> QuotesList in
+    router.get("allQuotes") { _ -> QuotesList in
         let listOfQuotes = getCurrentList()
         return listOfQuotes
     }

@@ -11,7 +11,6 @@ import Vapor
 struct FavList: Content {
     var favList: [Favourites]
 }
-
 struct Favourites: Content {
     var id: String
     var trackTitle: String?
